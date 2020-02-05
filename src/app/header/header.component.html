@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <span class="navbar-brand">Recipe Book</span>
+    <div class="navbar-collapse collapse justify-content-between">
+        <ul class="navbar-nav pt-1">
+            <li (click)="onSelect('recipe')" class="nav-item">
+                <a class="nav-link" href="#">Recipes</a>
+            </li>
+            <li (click)="onSelect('shopping-list')" class="nav-item">
+                <a class="nav-link" href="#">Shopping List</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav pt-1">
+            <li class="nav-item">
+                <button class="btn btn-sm" type="button">Save data</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-sm" type="button">Fetch data</button>
+            </li>
+        </ul>
+    </div>
+</nav>
