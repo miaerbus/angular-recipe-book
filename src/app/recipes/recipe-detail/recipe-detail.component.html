@@ -4,23 +4,24 @@
             <button class="btn btn-primary btn-sm mr-1">To Shopping List</button>
             <button class="btn btn-success btn-sm mr-1">Edit Recipe</button>
             <button class="btn btn-danger btn-sm">Delete Recipe</button>
-
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <img src="" alt="" class="img-responsive">
+        <img [src]="recipe.imagePath"
+             alt=""
+             class="img-fluid" />
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <h1>Name</h1>
+        <h1>{{ recipe.name }}</h1>
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-        Description
+        {{ recipe.description }}
     </div>
 </div>
 <div class="row">
