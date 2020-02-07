@@ -18,4 +18,11 @@ export class ShoppingListService {
         this.ingredients.push(ingredient);
         this.ingredientAdded.emit(this.ingredients.slice());
     }
+
+    addIngredients(ingredients: Ingredient[]) {
+        // do not for loop because there would be too many events emitted
+        // spread operator turns array of elements to list of elements because ...
+        this.ingredients.push(...ingredients);
+        this.ingredientAdded.emit(this.ingredients.slice());
+    }
 }
