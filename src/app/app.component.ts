@@ -8,8 +8,4 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   // @Input('selectedTab') selected: string;
   @Input() selected: string;
-
-  onSelect(tab: string) {
-    this.selected = tab;
-  }
 }
