@@ -26,6 +26,7 @@
                 <div class="col-sm-12">
                     <button class="btn btn-success mr-1"
                             type="submit"
+                            [ngClass]="isEditMode"
                             [disabled]="!f.valid">{{ isEditMode ? 'Update' : 'Add' }}</button>
                     <button *ngIf="isEditMode"
                             class="btn btn-danger mr-1"
