@@ -3,18 +3,44 @@
     <div class="navbar-collapse collapse justify-content-between">
         <ul class="navbar-nav pt-1">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/recipes" routerLinkActive="active">Recipes</a>
+                <a *ngIf="isAuthenticated"
+                   class="nav-link"
+                   routerLink="/recipes"
+                   routerLinkActive="active">Recipes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
+                <a *ngIf="!isAuthenticated"
+                   class="nav-link"
+                   routerLink="/auth"
+                   routerLinkActive="active">Authenticate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   routerLink="/shopping-list"
+                   routerLinkActive="active">Shopping List</a>
             </li>
         </ul>
         <ul class="navbar-nav pt-1">
             <li class="nav-item">
-                <button class="btn btn-sm" type="button" type="button" (click)="onSaveData()">Save data</button>
+                <button *ngIf="isAuthenticated"
+                        class="btn btn-sm"
+                        type="button"
+                        type="button"
+                        (click)="onSaveData()">Save data</button>
             </li>
             <li class="nav-item">
-                <button class="btn btn-sm" type="button" type="button" (click)="onFetchData()">Fetch data</button>
+                <button *ngIf="isAuthenticated"
+                        class="btn btn-sm"
+                        type="button"
+                        type="button"
+                        (click)="onFetchData()">Fetch data</button>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="isAuthenticated"
+                   class="nav-link" 
+                   routerLink="/"
+                   routerLinkActive="active"
+                   (click)="onLogout()">Logout</a>
             </li>
         </ul>
     </div>
