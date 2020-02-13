@@ -42,7 +42,7 @@ export class ShoppingEditComponent implements OnInit {
     this.onReset();
   }
 
-  onDelete(index: number) {
+  onDelete() {
     this.shoppingListService.deleteIngredient(this.editedItemIndex);
     this.onReset();
   }
