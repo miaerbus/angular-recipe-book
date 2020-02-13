@@ -10,7 +10,7 @@ import { RecipesResolverService } from './recipes-resolver.service';
 
 const routes: Routes = [
     {
-        path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard], children: [
+        path: '', component: RecipesComponent, canActivate: [AuthGuard], children: [
             { path: '', component: RecipeNotFoundComponent },
             { path: 'new', component: RecipeEditComponent }, // before route with dynamic param!
             { path: ':id', component: RecipeDetailComponent, resolve: [RecipesResolverService] },
